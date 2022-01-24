@@ -150,5 +150,5 @@ class System:
         return res.replace('\\\\\n', '\\\\ \\hline\n').replace("\\_", "_")
     
     def to_latex(self):
-        return latex_with_lines(pd.DataFrame(self.indiff_matrix, index=self.objects.keys(), columns=self.objects.keys()))
+        return System.latex_with_lines(pd.DataFrame(self.indiff_matrix, index=self.objects.keys(), columns=self.objects.keys()))
 
